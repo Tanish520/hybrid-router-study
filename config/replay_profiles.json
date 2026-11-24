@@ -1,0 +1,142 @@
+{
+  "_note": "Experiment 4 parameters. 'measured' values cite their source; 'assumed' values have a sensitivity range and must be reported as modelled, not measured.",
+  "languages_per_string": 12,
+  "pipeline_overhead_s": {
+    "value": 5.0,
+    "kind": "assumed",
+    "source": "extract + merge for a small PR; identical for every policy, so it does not change comparisons"
+  },
+  "stage1_s_per_job": {
+    "value": 1.25e-05,
+    "kind": "measured",
+    "source": "results/router_metrics.json stage1_timing_cpu: 9.5 us features + 3.0 us predict (laptop CPU)"
+  },
+  "verifier_s_per_job": {
+    "value": 1.6e-06,
+    "kind": "measured",
+    "source": "router/verifier.py v1, NLLB Hindi catalog, laptop CPU"
+  },
+  "nmt": {
+    "name": "NLLB-600M, CTranslate2 INT8, beam 2, 2 workers, AWS m5.large (2 vCPU)",
+    "s_per_translation": {
+      "value": 0.10661,
+      "kind": "measured",
+      "source": "docker-cloud-rp-aayush aws/BATCHING_RESULTS.md section 11: 33,767 translations/hour on the full KDE4 run"
+    },
+    "cold_start_s": {
+      "value": 30.0,
+      "kind": "measured",
+      "source": "aws/TRANSLATION_MEMORY_RESULTS.md: ~30 s fixed start-up per run (image check, model download and load) on a running machine",
+      "range": [
+        30.0,
+        136.0
+      ],
+      "range_note": "136 s adds the ~106 s fresh-machine boot measured in the same document"
+    },
+    "usd_per_hour": {
+      "value": 0.101,
+      "kind": "assumed",
+      "source": "m5.large on-demand price used in the AWS report (ap-south-1); check current price"
+    },
+    "replicas": {
+      "value": 1,
+      "kind": "measured setup",
+      "source": "one m5.large runner, as measured in the AWS pipeline",
+      "range": [
+        1,
+        4
+      ]
+    }
+  },
+  "llm_profiles": {
+    "gpt4o": {
+      "name": "GPT-4o-mini via the OpenAI API",
+      "concurrency": 16,
+      "latency_s_per_call": {
+        "value": 0.8,
+        "kind": "assumed",
+        "source": "no timing in either repository",
+        "range": [
+          0.4,
+          1.6
+        ]
+      },
+      "cold_start_s": {
+        "value": 0.0,
+        "kind": "assumed",
+        "source": "managed API, no container to start",
+        "range": [
+          0.0,
+          0.0
+        ]
+      },
+      "usd_per_1m_input_tokens": {
+        "value": 0.15,
+        "kind": "measured",
+        "source": "OpenAI list price (launch post; confirmed on pricing aggregators, Nov 2026)"
+      },
+      "usd_per_1m_output_tokens": {
+        "value": 0.6,
+        "kind": "measured",
+        "source": "as above"
+      },
+      "prompt_tokens": {
+        "value": 185,
+        "kind": "estimated",
+        "source": "prompts/system_zero_shot.txt, 743 characters / 4"
+      },
+      "repair_prompt_tokens": {
+        "value": 120,
+        "kind": "estimated",
+        "source": "IGSC issue-conditioned prompt in run_agentic_repair.py, approximate"
+      }
+    },
+    "llama": {
+      "name": "Llama-3.1-8B-Instruct on vLLM, 1x A100-80GB (serverless GPU container)",
+      "concurrency": 16,
+      "latency_s_per_call": {
+        "value": 0.473,
+        "kind": "measured",
+        "source": "LLM repo reports/repair_execution_telemetry.jsonl: 3,008 Llama requests in 88.99 s with 16 concurrent workers -> 33.8 requests/s -> 16 / 33.8 s per request (model load excluded)"
+      },
+      "cold_start_s": {
+        "value": 60.0,
+        "kind": "assumed",
+        "source": "loading an 8B model into a serverless GPU container; not measured in the repositories",
+        "range": [
+          20.0,
+          180.0
+        ]
+      },
+      "usd_per_hour": {
+        "value": 4.0,
+        "kind": "assumed",
+        "source": "on-demand A100-80GB, billed per second including start-up",
+        "range": [
+          2.0,
+          6.0
+        ]
+      }
+    }
+  },
+  "token_chars_per_token": {
+    "_kind": "estimated",
+    "latin": 4.0,
+    "cjk": 1.0,
+    "arabic": 2.5,
+    "indic": 2.0
+  },
+  "start_profiles": {
+    "warm": 0.0,
+    "mixed": 0.3,
+    "cold": 1.0
+  },
+  "pr_sizes": [
+    10,
+    50,
+    250,
+    1000
+  ],
+  "prs_per_size": 1000,
+  "seed": 0
+}
