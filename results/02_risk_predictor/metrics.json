@@ -1,0 +1,615 @@
+{
+  "nllb": {
+    "struct": {
+      "lightgbm": {
+        "prevalence": 0.0187,
+        "roc_auc": 0.9722,
+        "pr_auc": 0.4957,
+        "brier": 0.0125
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0187,
+        "roc_auc": 0.854,
+        "pr_auc": 0.1131,
+        "brier": 0.0992
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.0251,
+          "roc_auc": 0.9296,
+          "pr_auc": 0.4578,
+          "brier": 0.0173
+        },
+        "CJK": {
+          "prevalence": 0.0166,
+          "roc_auc": 0.9928,
+          "pr_auc": 0.6052,
+          "brier": 0.0093
+        },
+        "Arabic": {
+          "prevalence": 0.0223,
+          "roc_auc": 0.9732,
+          "pr_auc": 0.5926,
+          "brier": 0.013
+        },
+        "Indic": {
+          "prevalence": 0.0156,
+          "roc_auc": 0.9739,
+          "pr_auc": 0.4486,
+          "brier": 0.0111
+        }
+      }
+    },
+    "sem": {
+      "lightgbm": {
+        "prevalence": 0.0755,
+        "roc_auc": 0.6795,
+        "pr_auc": 0.1675,
+        "brier": 0.0673
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0755,
+        "roc_auc": 0.5013,
+        "pr_auc": 0.0757,
+        "brier": 0.169
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.0961,
+          "roc_auc": 0.6427,
+          "pr_auc": 0.1808,
+          "brier": 0.0843
+        },
+        "CJK": {
+          "prevalence": 0.1082,
+          "roc_auc": 0.655,
+          "pr_auc": 0.2204,
+          "brier": 0.0923
+        },
+        "Arabic": {
+          "prevalence": 0.1218,
+          "roc_auc": 0.5873,
+          "pr_auc": 0.1789,
+          "brier": 0.106
+        },
+        "Indic": {
+          "prevalence": 0.0467,
+          "roc_auc": 0.6298,
+          "pr_auc": 0.0919,
+          "brier": 0.044
+        }
+      }
+    },
+    "combined": {
+      "lightgbm": {
+        "prevalence": 0.0923,
+        "roc_auc": 0.7266,
+        "pr_auc": 0.2922,
+        "brier": 0.0752
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0923,
+        "roc_auc": 0.5717,
+        "pr_auc": 0.1185,
+        "brier": 0.1584
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.1176,
+          "roc_auc": 0.6842,
+          "pr_auc": 0.3019,
+          "brier": 0.0944
+        },
+        "CJK": {
+          "prevalence": 0.1229,
+          "roc_auc": 0.6946,
+          "pr_auc": 0.3207,
+          "brier": 0.0974
+        },
+        "Arabic": {
+          "prevalence": 0.1413,
+          "roc_auc": 0.6462,
+          "pr_auc": 0.3134,
+          "brier": 0.1118
+        },
+        "Indic": {
+          "prevalence": 0.0613,
+          "roc_auc": 0.7098,
+          "pr_auc": 0.241,
+          "brier": 0.0521
+        }
+      }
+    },
+    "shap_mean_abs_combined": {
+      "script_tier": 0.4513,
+      "n_chars": 0.2788,
+      "has_placeholder": 0.1504,
+      "upper_ratio": 0.1151,
+      "n_tokens": 0.0922,
+      "punct_ratio": 0.0825,
+      "identifier_like": 0.0503,
+      "digit_ratio": 0.0367,
+      "has_xml": 0.0289,
+      "has_accelerator": 0.0244,
+      "camel_density": 0.0151,
+      "ntt_match": 0.0123
+    },
+    "struct_v2": {
+      "lightgbm": {
+        "prevalence": 0.0415,
+        "roc_auc": 0.9709,
+        "pr_auc": 0.5734,
+        "brier": 0.0241
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0415,
+        "roc_auc": 0.9165,
+        "pr_auc": 0.3138,
+        "brier": 0.0766
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.0449,
+          "roc_auc": 0.9471,
+          "pr_auc": 0.4972,
+          "brier": 0.0289
+        },
+        "CJK": {
+          "prevalence": 0.0698,
+          "roc_auc": 0.9826,
+          "pr_auc": 0.7291,
+          "brier": 0.0257
+        },
+        "Arabic": {
+          "prevalence": 0.0513,
+          "roc_auc": 0.975,
+          "pr_auc": 0.6375,
+          "brier": 0.0261
+        },
+        "Indic": {
+          "prevalence": 0.0287,
+          "roc_auc": 0.9647,
+          "pr_auc": 0.4,
+          "brier": 0.0209
+        }
+      }
+    },
+    "combined_v2": {
+      "lightgbm": {
+        "prevalence": 0.1123,
+        "roc_auc": 0.7709,
+        "pr_auc": 0.3987,
+        "brier": 0.0828
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.1123,
+        "roc_auc": 0.6491,
+        "pr_auc": 0.2132,
+        "brier": 0.1386
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.1353,
+          "roc_auc": 0.724,
+          "pr_auc": 0.363,
+          "brier": 0.1024
+        },
+        "CJK": {
+          "prevalence": 0.1669,
+          "roc_auc": 0.7821,
+          "pr_auc": 0.5308,
+          "brier": 0.1037
+        },
+        "Arabic": {
+          "prevalence": 0.1662,
+          "roc_auc": 0.6981,
+          "pr_auc": 0.4199,
+          "brier": 0.1189
+        },
+        "Indic": {
+          "prevalence": 0.0736,
+          "roc_auc": 0.7512,
+          "pr_auc": 0.2834,
+          "brier": 0.0601
+        }
+      }
+    },
+    "sem_0.5": {
+      "lightgbm": {
+        "prevalence": 0.0301,
+        "roc_auc": 0.7311,
+        "pr_auc": 0.0879,
+        "brier": 0.0285
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0301,
+        "roc_auc": 0.4902,
+        "pr_auc": 0.0296,
+        "brier": 0.1352
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.0475,
+          "roc_auc": 0.6587,
+          "pr_auc": 0.095,
+          "brier": 0.0447
+        },
+        "CJK": {
+          "prevalence": 0.0497,
+          "roc_auc": 0.6714,
+          "pr_auc": 0.129,
+          "brier": 0.0457
+        },
+        "Arabic": {
+          "prevalence": 0.0506,
+          "roc_auc": 0.5687,
+          "pr_auc": 0.0672,
+          "brier": 0.0486
+        },
+        "Indic": {
+          "prevalence": 0.0115,
+          "roc_auc": 0.6482,
+          "pr_auc": 0.0227,
+          "brier": 0.0114
+        }
+      }
+    },
+    "sem_0.7": {
+      "lightgbm": {
+        "prevalence": 0.1631,
+        "roc_auc": 0.6529,
+        "pr_auc": 0.293,
+        "brier": 0.1295
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.1631,
+        "roc_auc": 0.5174,
+        "pr_auc": 0.1691,
+        "brier": 0.2281
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.1798,
+          "roc_auc": 0.6389,
+          "pr_auc": 0.3043,
+          "brier": 0.1405
+        },
+        "CJK": {
+          "prevalence": 0.2069,
+          "roc_auc": 0.6462,
+          "pr_auc": 0.3519,
+          "brier": 0.1546
+        },
+        "Arabic": {
+          "prevalence": 0.2421,
+          "roc_auc": 0.5911,
+          "pr_auc": 0.3449,
+          "brier": 0.178
+        },
+        "Indic": {
+          "prevalence": 0.127,
+          "roc_auc": 0.6225,
+          "pr_auc": 0.2174,
+          "brier": 0.1075
+        }
+      }
+    }
+  },
+  "google": {
+    "struct": {
+      "lightgbm": {
+        "prevalence": 0.0128,
+        "roc_auc": 0.9369,
+        "pr_auc": 0.2495,
+        "brier": 0.0109
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0128,
+        "roc_auc": 0.7069,
+        "pr_auc": 0.0373,
+        "brier": 0.1101
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.0172,
+          "roc_auc": 0.8104,
+          "pr_auc": 0.1172,
+          "brier": 0.0161
+        },
+        "CJK": {
+          "prevalence": 0.0125,
+          "roc_auc": 0.9315,
+          "pr_auc": 0.3119,
+          "brier": 0.01
+        },
+        "Arabic": {
+          "prevalence": 0.0146,
+          "roc_auc": 0.9649,
+          "pr_auc": 0.4466,
+          "brier": 0.0105
+        },
+        "Indic": {
+          "prevalence": 0.0104,
+          "roc_auc": 0.9671,
+          "pr_auc": 0.2681,
+          "brier": 0.0086
+        }
+      }
+    },
+    "sem": {
+      "lightgbm": {
+        "prevalence": 0.0537,
+        "roc_auc": 0.6916,
+        "pr_auc": 0.1215,
+        "brier": 0.0497
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0537,
+        "roc_auc": 0.5221,
+        "pr_auc": 0.0568,
+        "brier": 0.1479
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.0751,
+          "roc_auc": 0.6562,
+          "pr_auc": 0.1422,
+          "brier": 0.0679
+        },
+        "CJK": {
+          "prevalence": 0.0482,
+          "roc_auc": 0.6592,
+          "pr_auc": 0.1015,
+          "brier": 0.0455
+        },
+        "Arabic": {
+          "prevalence": 0.0996,
+          "roc_auc": 0.6136,
+          "pr_auc": 0.1607,
+          "brier": 0.0883
+        },
+        "Indic": {
+          "prevalence": 0.0372,
+          "roc_auc": 0.6703,
+          "pr_auc": 0.0859,
+          "brier": 0.0355
+        }
+      }
+    },
+    "combined": {
+      "lightgbm": {
+        "prevalence": 0.0644,
+        "roc_auc": 0.7233,
+        "pr_auc": 0.1818,
+        "brier": 0.057
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0644,
+        "roc_auc": 0.558,
+        "pr_auc": 0.0782,
+        "brier": 0.1468
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.0892,
+          "roc_auc": 0.651,
+          "pr_auc": 0.1795,
+          "brier": 0.0787
+        },
+        "CJK": {
+          "prevalence": 0.0587,
+          "roc_auc": 0.7142,
+          "pr_auc": 0.1858,
+          "brier": 0.0519
+        },
+        "Arabic": {
+          "prevalence": 0.1116,
+          "roc_auc": 0.6495,
+          "pr_auc": 0.2342,
+          "brier": 0.0943
+        },
+        "Indic": {
+          "prevalence": 0.046,
+          "roc_auc": 0.7264,
+          "pr_auc": 0.1567,
+          "brier": 0.0417
+        }
+      }
+    },
+    "shap_mean_abs_combined": {
+      "script_tier": 0.4017,
+      "n_chars": 0.3797,
+      "upper_ratio": 0.1291,
+      "punct_ratio": 0.119,
+      "has_placeholder": 0.1015,
+      "n_tokens": 0.1008,
+      "has_accelerator": 0.0777,
+      "digit_ratio": 0.0487,
+      "ntt_match": 0.0327,
+      "has_xml": 0.0324,
+      "camel_density": 0.0274,
+      "identifier_like": 0.0182
+    },
+    "struct_v2": {
+      "lightgbm": {
+        "prevalence": 0.0625,
+        "roc_auc": 0.9782,
+        "pr_auc": 0.7722,
+        "brier": 0.0243
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0625,
+        "roc_auc": 0.9219,
+        "pr_auc": 0.4658,
+        "brier": 0.0604
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.0514,
+          "roc_auc": 0.9269,
+          "pr_auc": 0.5183,
+          "brier": 0.0305
+        },
+        "CJK": {
+          "prevalence": 0.0842,
+          "roc_auc": 0.989,
+          "pr_auc": 0.9144,
+          "brier": 0.0138
+        },
+        "Arabic": {
+          "prevalence": 0.0619,
+          "roc_auc": 0.9831,
+          "pr_auc": 0.7826,
+          "brier": 0.0218
+        },
+        "Indic": {
+          "prevalence": 0.061,
+          "roc_auc": 0.9809,
+          "pr_auc": 0.6784,
+          "brier": 0.0251
+        }
+      }
+    },
+    "combined_v2": {
+      "lightgbm": {
+        "prevalence": 0.1099,
+        "roc_auc": 0.8429,
+        "pr_auc": 0.5825,
+        "brier": 0.0649
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.1099,
+        "roc_auc": 0.7425,
+        "pr_auc": 0.3426,
+        "brier": 0.1013
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.1192,
+          "roc_auc": 0.747,
+          "pr_auc": 0.3965,
+          "brier": 0.087
+        },
+        "CJK": {
+          "prevalence": 0.1255,
+          "roc_auc": 0.878,
+          "pr_auc": 0.7372,
+          "brier": 0.0505
+        },
+        "Arabic": {
+          "prevalence": 0.1532,
+          "roc_auc": 0.752,
+          "pr_auc": 0.5119,
+          "brier": 0.0981
+        },
+        "Indic": {
+          "prevalence": 0.0928,
+          "roc_auc": 0.864,
+          "pr_auc": 0.5487,
+          "brier": 0.0531
+        }
+      }
+    },
+    "sem_0.5": {
+      "lightgbm": {
+        "prevalence": 0.0191,
+        "roc_auc": 0.7305,
+        "pr_auc": 0.0579,
+        "brier": 0.0186
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.0191,
+        "roc_auc": 0.5034,
+        "pr_auc": 0.0193,
+        "brier": 0.1252
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.0346,
+          "roc_auc": 0.6793,
+          "pr_auc": 0.0722,
+          "brier": 0.0332
+        },
+        "CJK": {
+          "prevalence": 0.0148,
+          "roc_auc": 0.6324,
+          "pr_auc": 0.0289,
+          "brier": 0.0147
+        },
+        "Arabic": {
+          "prevalence": 0.0401,
+          "roc_auc": 0.6527,
+          "pr_auc": 0.0889,
+          "brier": 0.038
+        },
+        "Indic": {
+          "prevalence": 0.0093,
+          "roc_auc": 0.6833,
+          "pr_auc": 0.0198,
+          "brier": 0.0093
+        }
+      }
+    },
+    "sem_0.7": {
+      "lightgbm": {
+        "prevalence": 0.1322,
+        "roc_auc": 0.6735,
+        "pr_auc": 0.2603,
+        "brier": 0.1086
+      },
+      "rule_placeholder_or_accel": {
+        "prevalence": 0.1322,
+        "roc_auc": 0.5448,
+        "pr_auc": 0.1497,
+        "brier": 0.193
+      },
+      "lightgbm_by_script": {
+        "Latin": {
+          "prevalence": 0.1517,
+          "roc_auc": 0.6505,
+          "pr_auc": 0.2663,
+          "brier": 0.1231
+        },
+        "CJK": {
+          "prevalence": 0.1243,
+          "roc_auc": 0.6584,
+          "pr_auc": 0.2395,
+          "brier": 0.104
+        },
+        "Arabic": {
+          "prevalence": 0.219,
+          "roc_auc": 0.5958,
+          "pr_auc": 0.3162,
+          "brier": 0.1662
+        },
+        "Indic": {
+          "prevalence": 0.1106,
+          "roc_auc": 0.6662,
+          "pr_auc": 0.2357,
+          "brier": 0.0932
+        }
+      }
+    }
+  },
+  "settings": {
+    "lightgbm": {
+      "objective": "binary",
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "min_child_samples": 50,
+      "n_estimators": 300,
+      "subsample": 0.8,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.9,
+      "random_state": 0,
+      "verbose": -1
+    },
+    "folds": "GroupKFold(5, shuffle, seed 0) by source text",
+    "sem_threshold": 0.6
+  },
+  "stage1_timing_cpu": {
+    "features_us_per_string": 9.7,
+    "predict_us_per_string_batched": 2.83,
+    "predict_ms_single_call": 0.87
+  }
+}

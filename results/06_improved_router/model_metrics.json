@@ -1,0 +1,54 @@
+{
+  "nllb": {
+    "combined_v1_auc": {
+      "stage1_source_only": 0.7266,
+      "with_output_features": 0.7872
+    },
+    "combined_v2_auc": {
+      "stage1_source_only": 0.7709,
+      "with_output_features": 0.8226
+    },
+    "sem_auc": {
+      "stage1_source_only": 0.6795,
+      "with_output_features": 0.7418
+    },
+    "gain_gpt4o_spearman": {
+      "stage1_risk_score": 0.0446,
+      "gain_source_only": 0.1148,
+      "gain_with_output_features": 0.1727
+    },
+    "gain_llama_spearman": {
+      "stage1_risk_score": 0.0752,
+      "gain_source_only": 0.1984,
+      "gain_with_output_features": 0.2433
+    }
+  },
+  "stage2_timing": {
+    "features_us": 14.295000000856817,
+    "predict_us": 6.685603992082179
+  },
+  "google": {
+    "combined_v1_auc": {
+      "stage1_source_only": 0.7233,
+      "with_output_features": 0.7793
+    },
+    "combined_v2_auc": {
+      "stage1_source_only": 0.8429,
+      "with_output_features": 0.8746
+    },
+    "sem_auc": {
+      "stage1_source_only": 0.6916,
+      "with_output_features": 0.7343
+    },
+    "gain_gpt4o_spearman": {
+      "stage1_risk_score": 0.0654,
+      "gain_source_only": 0.0885,
+      "gain_with_output_features": 0.146
+    },
+    "gain_llama_spearman": {
+      "stage1_risk_score": 0.0783,
+      "gain_source_only": 0.1925,
+      "gain_with_output_features": 0.2308
+    }
+  }
+}
